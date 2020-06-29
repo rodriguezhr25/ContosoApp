@@ -1,0 +1,41 @@
+﻿@model IEnumerable<ContosoUniversity.Models.SchoolViewModels.EnrollmentDateGroup>
+
+@{
+    ViewData["Title"] = "Student Body Statistics";
+}
+
+<h2>Student Body Statistics</h2>
+
+<table>
+    <tr>
+        <th>
+            Enrollment Date
+        </th>
+        <th>
+            Students
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentDate)
+            </td>
+            <td>
+                @item.StudentCount
+            </td>
+        </tr>
+    }
+</table>
+
+<div class="row">
+    <div class="col-12 align-content-lg-center">
+        <h2>Contact</h2>
+        <address>
+            <p>Héctor Rodríguez</p>
+            <a href="mailto:rodriguezhr25@byui.edu">rodriguezhr25@byui.edu</a><br>
+            <a href="tel:+13115552368">(311) 555-2368</a>
+        </address>
+    </div>
+</div>
